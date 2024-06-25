@@ -1,0 +1,12 @@
+#!/bin/bash
+
+OS_TYPE=$(uname -s)
+
+if [ $OS_TYPE == "Linux" ]; then
+    apt update -y && apt install portaudio19-dev
+elif [ $OS_TYPE == "Darwin" ]; then
+    brew install portaudio
+else
+    echo "This script is only for Linux and macOS"
+    exit 1
+fi

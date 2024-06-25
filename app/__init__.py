@@ -1,0 +1,1 @@
+from app.speech_recognizer import SpeechRecognizer
